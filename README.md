@@ -10,7 +10,7 @@ A YouTube video downloader tool by TheSingleOneYT, using [youtube-dl](https://gi
 4) Done!
 
 # Credits
-youtube-dl - https://yt-dl.org/latest/youtube-dl.exe<br>
+youtube-dl - https://yt-dl.org/<br>
 
 # Images
 <p align="center">
