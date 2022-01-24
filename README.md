@@ -1,6 +1,6 @@
 # YT-DownloaderBatch
 
-A YouTube video downloader tool by TheSingleOneYT, using [youtube-dl](https://github.com/ytdl-org/youtube-dl).
+A simple YouTube video downloader tool, using [youtube-dl](https://github.com/ytdl-org/youtube-dl).
 
 # Installation
 
