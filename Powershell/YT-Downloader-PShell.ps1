@@ -8,6 +8,7 @@ Function Get-ProjectType {
     3 - Download AUDIO ONLY
     4 - Install ffmpeg (Chocolatey already installed)
     5 - Install ffmpeg (Chocolatey not installed)
+    6 - Install VC_redist
     Please choose"
     Switch ($type){
         1 {$choice="help"}
@@ -15,6 +16,7 @@ Function Get-ProjectType {
         3 {$choice="audio"}
         4 {$choice="ffmpeg-yes-choco"}
         5 {$choice="ffmpeg-no-choco"}
+        6 {$choice="vc_redist"}
     }
     return $choice
 }
@@ -94,7 +96,18 @@ Function Run-Main {
         "audio" {Run-Audio}
         "ffmpeg-no-choco" {Run-InstallNoChoco}
         "ffmpeg-yes-choco" {Run-InstallYesChoco}
+        "vc_redist" {Run-VCDownload}
     }
+}
+
+Function Run-VCDownload {
+    $ranName = [System.IO.Path]::GetRandomFileName()
+    $downloadTo = -join($env:TEMP, "/", $ranName, ".exe")
+    Invoke-WebRequest "https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x86.exe" -OutFile $downloadTo
+    echo "Running installer..."
+    Start-Process -FilePath $downloadTo -ArgumentList "/install","/quiet","/norestart" -Wait
+    echo "Installed!"
+    Run-Main
 }
 
 $ytdlexe = "D:\youtube-dl\youtube-dl.exe" # Set to your install location
