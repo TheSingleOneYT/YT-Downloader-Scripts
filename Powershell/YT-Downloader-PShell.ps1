@@ -65,7 +65,7 @@ Function Run-InstallYesChoco {
 }
 
 Function Run-Help {
-    echo 'HELP`n
+    echo 'HELP
         1) Make sure to have youtube-dl.exe (https://yt-dl.org/latest/youtube-dl.exe) installed in THE SAME DIRECTORY as this .ps1
         2) Install Microsoft Visual C++ 2010 x86 Redistributable (https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x86.exe)
         3) Run this Powershell Script again and enter your youtube-dl.exe path. Or, edit this scripts $ytdlexe at the end to this path.
@@ -79,7 +79,7 @@ Function Run-Main {
         echo "Could not find:" $ytdlexe "`nType 'help' to get help."
         $ytdlexe = Read-Host "`nEnter youtube-dl.exe location"
 
-        if ($ytdlexe == "help")
+        if ($ytdlexe -eq "help")
         {
             Run-Help
         }
