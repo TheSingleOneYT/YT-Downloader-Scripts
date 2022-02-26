@@ -1,6 +1,6 @@
 # YT-Downloader-Scripts
 
-A set of YouTube video downloader tool, using [youtube-dl](https://github.com/ytdl-org/youtube-dl).
+A set of YouTube video downloader tools, using [youtube-dl](https://github.com/ytdl-org/youtube-dl).
 
 # Installation
 
