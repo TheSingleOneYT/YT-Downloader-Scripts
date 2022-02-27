@@ -17,4 +17,6 @@ youtube-dl - https://yt-dl.org/<br>
 <p align="center">
 <img src="imgs\1.png">
 <img src="imgs\2.png">
+<img src="imgs\PS-1.png">
+<img src="imgs\PS-2.png">
 </p>
